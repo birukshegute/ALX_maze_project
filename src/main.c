@@ -7,7 +7,7 @@ SDL_Renderer* renderer = NULL;
 
 int init() {
 	if (!SDL_Init(SDL_INIT_EVERYTHING)) {
-		fprintf(stderr, "Error Initializing SDL.\n");
+		printf("Could not init SDL: %s\n", SDL_GetError());
 		return 0;
 	}
 	window = SDL_CreateWindow(
@@ -20,13 +20,13 @@ int init() {
 	);
 
 	if (!window){
-		printf("Could not init SDL: %s\n", SDL_GetError());
+		printf("Could not init Window: %s\n", SDL_GetError());
 		return 0;
 	}
 	renderer = SDL_CreateRenderer(window, -1, 0);
 	
 	if (!renderer) {
-		fprintf(stderr, "Error Creating SDL Renderer.\n");
+		printf("Could not init Render: %s\n", SDL_GetError());
 		return 0;
 	}
 
