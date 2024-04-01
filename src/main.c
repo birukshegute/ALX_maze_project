@@ -2,7 +2,7 @@
 #include <SDL2/SDL.h>
 #include "../headers/main.h"
 
-SDL_Window* window_one = NULL;
+SDL_Window* window = NULL;
 SDL_Renderer* renderer = NULL;
 
 int init() {
@@ -10,7 +10,7 @@ int init() {
 		fprintf(stderr, "Error Initializing SDL.\n");
 		return 0;
 	}
-	window_one = SDL_CreateWindow(
+	window = SDL_CreateWindow(
 		NULL,
 		SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED,	
@@ -19,11 +19,11 @@ int init() {
 		SDL_WINDOW_BORDERLESS
 	);
 
-	if (!window_one){
-		fprintf(stderr, "Error Creating SDL Window.\n");
+	if (!window){
+		printf("Could not init SDL: %s\n", SDL_GetError());
 		return 0;
 	}
-	renderer = SDL_CreateRenderer(window_one, -1, 0);
+	renderer = SDL_CreateRenderer(window, -1, 0);
 	
 	if (!renderer) {
 		fprintf(stderr, "Error Creating SDL Renderer.\n");
@@ -58,7 +58,7 @@ void render(){
 }
 int destroy_window(){
 	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window_one);
+	SDL_DestroyWindow(window);
 	SDL_Quit();
 	return 1;
 }
