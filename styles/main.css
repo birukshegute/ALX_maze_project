@@ -1,5 +1,5 @@
 body {
-    font-family: 'Lemonada';
+    font-family: Lemonada;
     text-align: center;
 }
 img {
@@ -14,9 +14,12 @@ input {
     border-radius: 8px;
     border-width: 2px;
     border-color: black;
+    font-size: 24px;
+    font-family: Lemonada;
     justify-content: space-between;
 }
 #Add{
-    font-size: 36px;
+    font-size: 30px;
+    font-family: Lemonada;
     background: rgba(0, 0, 0, 0.3);
 }
