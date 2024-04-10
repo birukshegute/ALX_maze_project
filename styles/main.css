@@ -14,9 +14,12 @@ input {
     border-radius: 8px;
     border-width: 2px;
     border-color: black;
+    justify-content: space-between;
+}
+input input:focus, input input:active {
+    outline: none;
 }
 #Add{
-    font-size: 24;
+    font-size: 36px;
     background: rgba(0, 0, 0, 0.3);
-
 }
