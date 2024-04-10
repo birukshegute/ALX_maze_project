@@ -22,12 +22,12 @@ img {
     border-color: black;
     font-size: 20px;
     font-family: Lemonada;
-    justify-content: space-between;
 }
-.wrapper button {
+.wrapper #Add {
     position: absolute;
     border-width: 0px;
     font-size: 24px;
     font-family: Lemonada;
     background: rgba(0, 0, 0, 0);
+    height: 100%;
 }
