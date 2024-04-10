@@ -16,9 +16,6 @@ input {
     border-color: black;
     justify-content: space-between;
 }
-input input:focus, input input:active {
-    outline: none;
-}
 #Add{
     font-size: 36px;
     background: rgba(0, 0, 0, 0.3);
