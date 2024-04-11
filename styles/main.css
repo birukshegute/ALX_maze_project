@@ -43,39 +43,26 @@ img {
     font-family: Lemonada;
     font-size: 18px;
 }
-#low {
-    position: absolute;
-    border-width: 2px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-family: Lemonada;
-    background-color: rgba(0,0,0, 0);
-    left: 800px;
-}
-#low:hover {
-    background-color: rgba(0,0,0, 0.2);
-}
-#medium {
-    position: absolute;
-    border-width: 2px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-family: Lemonada;
-    background-color: rgba(0,0,0, 0);
-    left: 900px;
-}
-#medium:hover {
-    background-color: rgba(0,0,0, 0.2);
-}
-#high {
-    position: absolute;
-    border-width: 2px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-family: Lemonada;
-    background-color: rgba(0,0,0, 0);
-    left: 1050px;
-}
-#high:hover {
-    background-color: rgba(0,0,0, 0.2);
-}
+#pri{
+    height: 44px;
+    border: none;
+    overflow: hidden;
+  }
+#pri::-moz-focus-inner {
+    border: 0;
+  }
+#pri:focus {
+    outline: none;
+  }
+#pri option{
+    width: 60px;
+    font-size: 1.2em;
+    padding: 10px 0;
+    text-align: center;
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border:rgb(204, 204, 0) solid 1px;
+    border-radius: 5px;
+    color: rgb(204, 204, 0);
+  }
