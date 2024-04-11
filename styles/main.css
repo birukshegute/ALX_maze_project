@@ -26,12 +26,56 @@ img {
     font-size: 20px;
     font-family: Lemonada;
 }
-.wrapper #Add {
+#Add {
     position: absolute;
     border-width: 0px;
     font-size: 36px;
     font-family: Lemonada;
-    background: rgba(0, 0, 0, 0);
+    background-color: rgba(0,0,0, 0.5);
     height: 80%;
     right: 0;
+}
+#Add:hover {
+    background-color: rgba(0,0,0, 0.2);
+    color: rgba(0,0,0, 0.5);
+}
+.priority p{
+    font-family: Lemonada;
+    font-size: 18px;
+}
+#low {
+    position: absolute;
+    border-width: 2px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: Lemonada;
+    background-color: rgba(0,0,0, 0);
+    left: 800px;
+}
+#low:hover {
+    background-color: rgba(0,0,0, 0.2);
+}
+#medium {
+    position: absolute;
+    border-width: 2px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: Lemonada;
+    background-color: rgba(0,0,0, 0);
+    left: 900px;
+}
+#medium:hover {
+    background-color: rgba(0,0,0, 0.2);
+}
+#high {
+    position: absolute;
+    border-width: 2px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: Lemonada;
+    background-color: rgba(0,0,0, 0);
+    left: 1050px;
+}
+#high:hover {
+    background-color: rgba(0,0,0, 0.2);
 }
