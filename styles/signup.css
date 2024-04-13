@@ -57,6 +57,13 @@ img {
     left: 20%;
     position:absolute;
 }
+.form #terms, .form #privacy{
+    background-color: rgb(0,0,0, 0.1);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
 .form button{
     font-size: 18px;
     width: 200px;
