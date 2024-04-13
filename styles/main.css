@@ -2,6 +2,31 @@ body {
     font-family: Lemonada;
     text-align: center;
 }
+.menu{
+    text-align:right;
+    font-family: Lemonada;
+}
+.menu a{
+    border: 2px solid#000;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(255,255,255);
+    text-decoration: none;
+}
+.menu a:link{
+    color:#00f;
+}
+.menu a:hover{
+    color:rgb(0,0,255, 0.7)
+}
+.menu a:active {
+    background-color: rgb(255,255,255);
+    color:#f00;
+}
+.menu a:visited{
+    background-color: rgb(255,255,255);
+    color: #f00;
+}
 img {
     display: block;
     margin-left: auto;
@@ -115,24 +140,4 @@ option:hover{
 .delete{
     position: absolute;
     right: 40px;
-}
-.menu{
-    text-align:right;
-    font-family: Lemonada;
-}
-.menu a{
-    border: 2px solid#000;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: rgb(0,0,0, 0.1);
-    text-decoration: none;
-}
-.menu a:link{
-    color:#000;
-}
-.menu a:hover{
-    color:rgb(0,0,0, 0.7)
-}
-.menu a:active a:visited{
-    background-color: rgb(0,0,0, 0.3);
 }
