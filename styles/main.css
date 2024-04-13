@@ -116,3 +116,23 @@ option:hover{
     position: absolute;
     right: 40px;
 }
+.menu{
+    text-align:right;
+    font-family: Lemonada;
+}
+.menu a{
+    border: 2px solid#000;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(0,0,0, 0.1);
+    text-decoration: none;
+}
+.menu a:link{
+    color:#000;
+}
+.menu a:hover{
+    color:rgb(0,0,0, 0.7)
+}
+.menu a:active a:visited{
+    background-color: rgb(0,0,0, 0.3);
+}
