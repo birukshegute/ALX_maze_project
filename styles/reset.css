@@ -1,0 +1,60 @@
+body {
+    font-family: Lemonada;
+    text-align: center;
+}
+.menu{
+    text-align:right;
+    font-family: Lemonada;
+}
+.menu a{
+    border: 2px solid#000;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(255,255,255);
+    text-decoration: none;
+}
+.menu a:link{
+    color:#00f;
+}
+.menu a:hover{
+    color:rgb(0,0,255, 0.7)
+}
+.menu a:active {
+    background-color: rgb(255,255,255);
+    color:#f00;
+}
+.menu a:visited{
+    background-color: rgb(255,255,255);
+    color: #f00;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22%;
+}
+.wrapper {
+    display:inline-block;
+    width: 30%;
+    max-width: 100%;
+    background-color: rgba(0,0,0, 0.1);
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+    padding: 10px, 20px;
+}
+.wrapper input{
+    width: 50%;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-family: Lemonada;
+}
+.wrapper button{
+    font-size: 18px;
+    font-family: Lemonada;
+    background-color: rgba(0,0,0, 0.1);
+    border: 2px solid #000;
+    padding: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+}
