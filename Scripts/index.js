@@ -7,5 +7,3 @@ const pri = document.getElementById("pri");
 const low = document.getElementById("low");
 const medium = document.getElementById("medium");
 const high = document.document.getElementById("high");
-
-console.log('hello')
