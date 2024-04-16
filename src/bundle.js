@@ -7,8 +7,26 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./Scripts/index.js":
+/*!**************************!*\
+  !*** ./Scripts/index.js ***!
+  \**************************/
+/***/ (() => {
+
+eval("const login = document.getElementById(\"login\");\r\nconst signup = document.getElementById(\"signup\");\r\nconst about = document.getElementById(\"about\");\r\nconst Box = document.getElementById(\"Box\");\r\nconst Add = document.getElementById(\"Add\");\r\nconst pri = document.getElementById(\"pri\");\r\nconst low = document.getElementById(\"low\");\r\nconst medium = document.getElementById(\"medium\");\r\nconst high = document.document.getElementById(\"high\");\r\n\r\nconsole.log('hello')\n\n//# sourceURL=webpack://to-do_list/./Scripts/index.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
 /******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./Scripts/index.js"]();
 /******/ 	
 /******/ })()
 ;
