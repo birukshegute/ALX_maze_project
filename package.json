@@ -2,7 +2,7 @@
   "name": "to-do_list",
   "version": "1.0.0",
   "description": "This is a repository that contains the source code for running a To-Do List Web App in a browser.",
-  "main": "index.js",
+  "main": "Scripts/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
