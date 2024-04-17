@@ -99,12 +99,10 @@ option:hover{
 }
 .topic {
     font-family: Lemonada;
-    font-size :28px; 
-    text-align: center;
+    font-size :28px;
 }
 .tasks{
     display:inline-block;
-    position: relative;
     width: 20%;
     max-width: 100%;
     max-height: 100%;
@@ -129,15 +127,21 @@ option:hover{
     width: 30px;
     height: 30px;
 }
+.check button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+.check button:hover{
+    opacity: 0.5
+}
 .pri1{
-    position: absolute;
     right: 120px;
 }
 .edit{
-    position: absolute;
     right: 80px;
 }
 .delete{
-    position: absolute;
     right: 40px;
 }

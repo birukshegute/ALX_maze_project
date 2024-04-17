@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
-
+import {
+    getFirestore, collection, getDocs
+} from 'firebase/firestore'
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyD0AyE0wzp7Ga8BUWN_h8_Aj8qG0sLAREg",
@@ -11,7 +13,51 @@ const firebaseConfig = {
     measurementId: "G-CRTYC1H96P"
   };
 
+//initialize firebase
 initializeApp(firebaseConfig);
+
+//init services
+const db = getFirestore()
+
+// collection reference
+const colRef = collection(db, 'tasks')
+
+//get collection data
+getDocs(colRef)
+  .then((snapshot) => {
+    let tasks = []
+    snapshot.docs.forEach((doc) => {
+        tasks.push({... doc.data(), id: doc.id })
+    })
+    console.log(tasks)
+  })
+  .catch(err => {
+    console.log(err.message)
+  })
+//adding a task
+const addTask = document.quirySelector('.add')
+addBookForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+
+})
+//deleting a task
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const login = document.getElementById("login");
 // const signup = document.getElementById("signup");
