@@ -63,16 +63,26 @@
 // const signup = document.getElementById("signup");
 // const about = document.getElementById("about");
 const Box = document.getElementById("Box");
-let t1 = document.getElementById("t1");
+const check = document.getElementById("check");
 
 function addTask(){
     if (Box.value === ''){
         alert("please type-in a task value");
     }
     else{
-        t1.value = Box.value;
-        t1.innerHTML = Box.value;
-        console.log(t1);
+        let checkbox = document.createElement("input");
+        let li = document.createElement("li");
+        let del = document.createElement("button");
+        let edit = document.createElement("button");
+        let br = document.createElement("br");
+        checkbox.type = 'checkbox';
+        li.innerHTML = Box.value;
+        del.innerHTML = '<img src="../images/delete.png">'; 
+        edit.innerHTML = '<img src="../images/edit.png">';
+        check.appendChild(li);
+        check.appendChild(del);
+        check.appendChild(edit);
+        check.appendChild(br)
     }
 }
 // const pri = document.getElementById("pri");
