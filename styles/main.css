@@ -52,7 +52,7 @@ img {
     font-family: Lemonada;
     background: transparent;
 }
-#Add {
+.backgrd1 button {
     position: absolute;
     border-width: 0px;
     font-size: 36px;
@@ -60,8 +60,9 @@ img {
     background-color: rgba(0,0,0, 0.1);
     height: 80%;
     right: 0;
+    cursor: pointer;
 }
-#Add:hover {
+.backgrd1 button:hover {
     background-color: rgba(0,0,0, 0.2);
     color: rgba(0,0,0, 0.5);
 }
@@ -132,6 +133,7 @@ option:hover{
     cursor: pointer;
     appearance: none;
     background-color: inherit;
+    float:inline-end;
 }
 .check button:hover{
     opacity: 0.5
@@ -140,7 +142,7 @@ option:hover{
     right: 120px;
 }
 .edit{
-    right: 80px;
+    right: 80px; 
 }
 .delete{
     right: 40px;
