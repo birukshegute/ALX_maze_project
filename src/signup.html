@@ -19,14 +19,14 @@
     <br>
     <div class = "wrapper">
         <form class="form">
-        <label for="fname"><b>First name:</b></label>
+        <label for="fname" id="fname"><b>First name:</b></label>
             <input type="text" placeholder="Enter first name" name="fname" required>
         <br>
-        <label for="lname"><b>Last name:</b></label>
+        <label for="lname" id="lname"><b>Last name:</b></label>
             <input type="text" placeholder="Enter last name" name="lname" required>
         <br>
-        <label for="uname"><b>Email:</b></label>
-            <input type="text" placeholder="Enter Email" name="uname" required>
+        <label for="email" id="email"><b>email:</b></label>
+            <input type="text" placeholder="Enter email" name="email" required>
         <br>
         <label for="psw"><b>Password:</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
@@ -34,7 +34,7 @@
         <label for="rpsw"><b>Re-enter Password:</b></label>
             <input type="password" placeholder="Re-enter Password" name="psw" required>
         <br>
-        <label for="security"><b>Choose a Security Question:</b></label>
+        <!-- <label for="security"><b>Choose a Security Question:</b></label>
         <br>
         <select class="sel" name="sel">
             <option value="0">What is the name of your first pet</option>
@@ -46,7 +46,7 @@
         <br>
         <label for="answer"><b>Security Answer:</b></label>
             <input type="text" placeholder="Security Answer" name="answer" required>
-        <br>
+        <br> -->
         <input type = "checkbox" id = "terms" name="terms"> I have read and accepted <a href="https://www.termsofservicegenerator.net/live.php?token=zxfqv76OpFtU6byGpwKF3zebZF0Y9ufL"> the terms of service</a> <br>
         <input type = "checkbox" id = "privacy" name="privacy"> I have read and accepted <a href="privacy.html"> the privacy policy</a><br>
         <button type="submit" onclick="register()">Sign Up</button> <br>
