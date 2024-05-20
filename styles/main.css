@@ -144,7 +144,7 @@ option:hover{
 .delete{
     right: 40px;
 }
-.warning {
+.warn {
    font-size: 20px;
    color:#f00;
 }
