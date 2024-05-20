@@ -1,0 +1,127 @@
+body {
+    font-family: Lemonada;
+    text-align: center;
+}
+.menu {
+    font-family: Lemonada;
+    font-size: 20px;
+    color: rgba(0.5, 0.5, 0.3);
+    background-color: rgba(0,0,0, 0.1);
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22%;
+}
+.wrapper {
+    display:inline-block;
+    position: relative;
+    width: 20%;
+    max-width: 100%;
+}
+.wrapper input {
+    max-width: 100%;
+    width:100%;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: black;
+    font-size: 20px;
+    font-family: Lemonada;
+    background: transparent;
+}
+.backgrd1 button {
+    position: absolute;
+    border-width: 0px;
+    font-size: 36px;
+    font-family: Lemonada;
+    background-color: rgba(0,0,0, 0.1);
+    height: 80%;
+    right: 0;
+    cursor: pointer;
+}
+.backgrd1 button:hover {
+    background-color: rgba(0,0,0, 0.2);
+    color: rgba(0,0,0, 0.5);
+}
+.priority p{
+    font-family: Lemonada;
+    font-size: 18px;
+}
+#pri{
+    height: 50px;
+    border: none;
+    overflow: hidden;
+  }
+#pri::-moz-focus-inner {
+    border: 0;
+  }
+#pri:focus {
+    outline: none;
+  }
+option{
+    width: 100px;
+    font-size: 18px;
+    padding: 2px 0;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+    display: inline-block;
+    border:rgb(0, 0, 0) solid 2px;
+    border-radius: 8px;
+    background-color: rgb(0,0,0, 0);
+    color: rgb(0,0,0, 1);
+    font-family: Lemonada;
+  }
+option:hover{
+    background-color: rgb(0,0,0, 0.2);
+}
+.topic {
+    font-family: Lemonada;
+    font-size :28px;
+}
+.tasks{
+    display:inline-block;
+    width: 20%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    background-color: rgb(0,0,0, 0.1);
+    border-radius: 8px;
+    border-width: 0px;
+}
+.check{
+    text-align: left;
+    font-size: 22px;
+}
+.check li {
+    cursor: pointer;
+    display: inline-flex;
+}
+.check img{
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+}
+.check button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    float:inline-end;
+}
+.check button:hover{
+    opacity: 0.5
+}
+.pri1{
+    right: 120px;
+}
+.edit{
+    right: 80px; 
+}
+.delete{
+    right: 40px;
+}
