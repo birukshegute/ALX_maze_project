@@ -18,7 +18,7 @@
         <br>
         <div class = "wrapper">
         <input type="text" id="Box" name="Box" placeholder="Add a Task">
-        <button type="submit" onclick="warning()"><b>ADD</b></button>
+        <button type="submit" onClick="warnlog()"><b>ADD</b> </button>
         </div>
     </div>
     <br>
@@ -36,6 +36,11 @@
     </div>
     <p class = "warn">Please sign up or login to add tasks.</p>
   </div>
-  <script type="module" src="../Scripts/index.js"></script>
+  <script type="module" src="../Scripts/index.js">
+    function warnlog(){
+      alert("Please login to add tasks!");
+    }
+    
+  </script>
 </body>
 </html>
