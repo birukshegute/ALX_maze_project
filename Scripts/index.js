@@ -40,3 +40,8 @@ addBookForm.addEventListener('submit', (e) => {
     e.preventDefault()
 })
 //deleting a task
+
+
+function warning(){
+    alert("Please login to add tasks!");
+}

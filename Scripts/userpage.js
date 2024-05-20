@@ -9,6 +9,9 @@ function addTask(){
     if (Box.value === ''){
         alert("please type-in a task value");
     }
+    // else if (Box.value === ){
+
+    // }
     else{
         let checkbox = document.createElement("input");
         let li = document.createElement("li");
