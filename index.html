@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Lemonada' rel='stylesheet'>
     <title> To-Do List </title>
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
@@ -27,13 +27,13 @@
 </head>
 <body>
   <div class = "menu">
-   <a href = "login.html" id="login" name="login"> login </a>
-   <a href = "signup.html" id="signup" name="signup" > signup </a>
-   <a href = "about.html" id="about" name="about" > about </a>
+   <a href = "src/login.html" id="login" name="login"> login </a>
+   <a href = "src/signup.html" id="signup" name="signup" > signup </a>
+   <a href = "src/about.html" id="about" name="about" > about </a>
   </div>
     <div class="backgrd1">
       <br>
-        <a href="index.html"><img src="../images/icon.jpg"></a> 
+        <a href="index.html"><img src="images/icon.jpg"></a> 
         <br>
         <div class = "wrapper">
         <input type="text" id="Box" name="Box" placeholder="Add a Task">
@@ -55,6 +55,5 @@
     </div>
     <p class = "warn">Please sign up or login to add tasks.</p>
   </div>
-  <script type="module" src="../Scripts/index.js"></script>
 </body>
 </html>
