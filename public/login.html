@@ -6,6 +6,21 @@
     <link href='https://fonts.googleapis.com/css?family=Lemonada' rel='stylesheet'>
     <title> Log in </title>
     <link rel="stylesheet" href="styles/login.css">
+    <script type="module"> 
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";    
+        const firebaseConfig = {
+    apiKey: "AIzaSyB3cCXV1rGwh1T6iqN0QaQer_8wE921FTQ",
+    authDomain: "todolist-80334.firebaseapp.com",
+    projectId: "todolist-80334",
+    storageBucket: "todolist-80334.appspot.com",
+    messagingSenderId: "1033852333400",
+    appId: "1:1033852333400:web:a8597da22a7376bd2c092d"
+  };
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+    </script>
+    <script type="module" src="Scripts/login.js" defer> </script>
 </head>
 <body>
     <div class = "menu">
@@ -21,14 +36,14 @@
     <div class = "wrapper">
         <form>
             <br>
-            <label for="uname"><b>Email:</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="emal"><b>Email:</b></label>
+            <input type="email" placeholder="Enter Username" name="emal" id="emal" required>
         <br>
             <label for="psw"><b>Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
         <br>
         <br>
-             <button type="submit" id="log">Log in</button>
+             <button type="submit" id="log" class="logn">Log in</button>
         <br>   
         <br> 
          <button type="submit" id="gicon"><img src="images/Google.png"> Login with Google instead</button>

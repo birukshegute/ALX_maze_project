@@ -1,5 +1,3 @@
-const auth = getAuth(app);
-
 const signedin = document.getElementById("signedin");
 const signedout = document.getElementById("signedout");
 
