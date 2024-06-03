@@ -14,15 +14,15 @@ function lo() {
     alert("Please insert a valid email")
   }
   else {
-    auth.signInWithEmailAndPassword(auth, ema, passw)
+    signInWithEmailAndPassword(auth, ema, passw)
    .then(() => {
     // Signed in 
     window.location.href = "index.html";
    // const user = userCredential.user;
     // ...
   })
-  .catch((err) => {
-    alert(err.message);
+  .catch((error) => {
+    alert(error.message);
   });
 }
 }
