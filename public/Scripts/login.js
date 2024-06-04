@@ -1,4 +1,6 @@
 const lognbtn = document.querySelector(".logn");
+const provider = new GoogleAuthProvider();
+const supglbtn = document.querySelector(".supgl")
 
 function lo() {
 
@@ -26,5 +28,23 @@ function lo() {
   });
 }
 }
+function supgl() {
+
+  signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    const user = result.user;
+    window.location.href = "index.html";
+  }).catch((error) => {
+    const errorMessage = error.message;
+      alert(errorMessage);
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+}
 
 lognbtn.addEventListener("click", lo);
+supglbtn.addEventListener("click", supgl);

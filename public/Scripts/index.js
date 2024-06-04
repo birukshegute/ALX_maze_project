@@ -1,5 +1,6 @@
 const signedin = document.getElementById("signedin");
 const signedout = document.getElementById("signedout");
+const sgnoutbtn = document.querySelector(".sgnout");
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -15,3 +16,13 @@ onAuthStateChanged(auth, (user) => {
         signedout.hidden = true;
     }
   });
+
+  function sout(){
+    signOut(auth).then(() => {
+      onAuthStateChanged(auth, (user));
+    }).catch((error) => {
+      // An error happened.
+    });
+  }
+
+sgnoutbtn.addEventListener("click", sout);

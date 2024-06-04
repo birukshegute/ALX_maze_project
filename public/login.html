@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles/login.css">
     <script type="module"> 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";    
+        import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";    
         const firebaseConfig = {
     apiKey: "AIzaSyCTtgVoRDC4K1T-Hj87FDOjuvHaMH5irHk",
     authDomain: "todolist-80334.firebaseapp.com",
     projectId: "todolist-80334",
     storageBucket: "todolist-80334.appspot.com",
     messagingSenderId: "1033852333400",
-    appId: "1:1033852333400:web:a8597da22a7376bd2c092d"  };
+    appId: "1:1033852333400:web:a8597da22a7376bd2c092d" };
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
     </script>
@@ -36,16 +36,16 @@
         <form>
             <br>
             <label for="emal"><b>Email:</b></label>
-            <input type="email" placeholder="Enter Username" name="emal" id="emal" required>
+            <input type="email" placeholder="Enter Username" name="emal" id="emal">
         <br>
             <label for="psw"><b>Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw">
         <br>
         <br>
-             <button type="submit" id="log" class="logn">Log in</button>
+             <button id="log" class="logn">Log in</button>
         <br>   
         <br> 
-         <button type="submit" id="gicon"><img src="images/Google.png"> Login with Google instead</button>
+         <button id="gicon" class="supgl"><img src="images/Google.png"> Login with Google instead</button>
         <br>    
             <label class = "remember">
               <input type="checkbox" checked="checked" name="remember"> Remember me

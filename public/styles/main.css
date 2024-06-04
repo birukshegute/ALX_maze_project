@@ -35,6 +35,20 @@ body {
     width: 10%;
     border-radius: 15px;
 }
+.sgnoutdiv button {
+    position: absolute;
+    right: 0px;
+    font-family: Lemonada;
+    margin: 10px;
+    background-color: rgba(0,0,0, 0.1);
+    font-size: 18px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.sgnoutdiv button:hover {
+    background-color: rgba(0,0,0, 0.2);
+    color: rgba(0,0,0, 0.5);
+}
 img {
     display: block;
     margin-left: auto;

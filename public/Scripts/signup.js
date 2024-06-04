@@ -1,6 +1,6 @@
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
- import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+ import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
  // TODO: Add SDKs for Firebase products that you want to use
  // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,10 +16,10 @@
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
-
  const auth = getAuth(app);
-
+ const provider = new GoogleAuthProvider();
  const sgnbtn = document.querySelector(".sup");
+ const supglbtn = document.querySelector(".supgl")
  
  function su() {
 
@@ -55,10 +55,10 @@
     .then(() => {
     // Signed up 
     alert("User created!"),
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     // ...
   })
-  .catch((error) => {
+    .catch(error => {
     const errorMessage = error.message;
     alert(errorMessage);
     // ..
@@ -66,4 +66,32 @@
 }
 }
 
+function supgl() {
+  const term = document.getElementById("terms").checked;
+  const privacy = document.getElementById("privacy").checked;
+
+  if(term === false){
+    alert("READ and AGREE with the Terms of Service.");
+  }  
+  else if (privacy === false){
+    alert("READ and AGREE with the privacy policy.");
+  }
+  else {
+  signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    const user = result.user;
+    window.location.href = "index.html";
+  }).catch((error) => {
+    const errorMessage = error.message;
+      alert(errorMessage);
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+}
+}
 sgnbtn.addEventListener("click", su);
+supglbtn.addEventListener("click", supgl);
