@@ -1,28 +1,45 @@
-const signedin = document.getElementById("signedin");
-const signedout = document.getElementById("signedout");
-const sgnoutbtn = document.querySelector(".sgnout");
+document.addEventListener("DOMContentLoaded", () => { 
+const auth = window.firebaseAuth;
+const onAuthStateChanged = window.onAuthStateChanged;
+const signOut = window.signOut;
 
+const signedInElement = document.getElementById("signedin");
+const signedOutElement = document.getElementById("signedout");
+const signOutButton = document.querySelector(".sgnout");
+
+if (!auth || !onAuthStateChanged || !signOut) {
+  console.error("Firebase auth or methods are not available");
+  return;
+}
+
+signedInElement.hidden = true;
+signedOutElement.hidden = true;
+
+console.log("Initial state: both sections hidden");
+
+// Monitor authentication state changes
 onAuthStateChanged(auth, (user) => {
     if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/auth.user
-      // const uid = user.uid;
-        signedin.hidden = false;
-        signedout.hidden = true;
-    } 
-    else {
-        //user is signed out
-        signedin.hidden = false;
-        signedout.hidden = true;
+        // User is signed in
+        signedInElement.hidden = false;
+        signedOutElement.hidden = true;
+    } else {
+        // User is signed out
+        signedInElement.hidden = true;
+        signedOutElement.hidden = false;
     }
-  });
+});
 
-  function sout(){
-    signOut(auth).then(() => {
-      onAuthStateChanged(auth, (user));
-    }).catch((error) => {
-      // An error happened.
-    });
-  }
+function signOutUser() {  // This line was added
+  signOut(auth)  // This line was added
+      .then(() => {
+          console.log('User signed out successfully.');
+      })
+      .catch((error) => {
+          console.error('Error signing out:', error);
+      });
+}
 
-sgnoutbtn.addEventListener("click", sout);
+// Attach sign out function to button click event
+signOutButton.addEventListener("click", signOutUser);  // This line was added
+});
