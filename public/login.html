@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/login.css">
     <script type="module"> 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, connectAuthEmulator } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";    
+        import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, connectAuthEmulator, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";    
         const firebaseConfig = {
     apiKey: "AIzaSyCTtgVoRDC4K1T-Hj87FDOjuvHaMH5irHk",
     authDomain: "todolist-80334.firebaseapp.com",
@@ -18,6 +18,13 @@
     appId: "1:1033852333400:web:a8597da22a7376bd2c092d" };
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
+
+        window.firebaseAuth = auth;
+        window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+        window.GoogleAuthProvider = GoogleAuthProvider;
+        window.signInWithPopup = signInWithPopup;
+
+        console.log("Firebase initialized and functions set globally");
     </script>
     <script type="module" src="Scripts/login.js" defer> </script>
 </head>
@@ -36,16 +43,16 @@
         <form>
             <br>
             <label for="emal"><b>Email:</b></label>
-            <input type="email" placeholder="Enter Username" name="emal" id="emal">
+            <input type="email" placeholder="Enter Username" name="email" id="email">
         <br>
             <label for="psw"><b>Password:</b></label>
             <input type="password" placeholder="Enter Password" name="psw" id="psw">
         <br>
         <br>
-             <button id="log" class="logn">Log in</button>
+             <button type="button" id="log" class="logn">Log in</button>
         <br>   
         <br> 
-         <button id="gicon" class="supgl"><img src="images/Google.png"> Login with Google instead</button>
+         <button type="button" id="gicon" class="supgl"><img src="images/Google.png"> Login with Google instead</button>
         <br>    
             <label class = "remember">
               <input type="checkbox" checked="checked" name="remember"> Remember me

@@ -1,66 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="google-site-verification" content="Wtc0-h1PpIr0fb3MNAyzD-15NdVy9rAaneiAPLEGHAM" />
-    <link href='https://fonts.googleapis.com/css?family=Lemonada' rel='stylesheet'>
-    <title> Sign-up </title>
-    <link rel="stylesheet" href="styles/signup.css">
-    <!-- <script defer src="/__/firebase/10.5.0/firebase-app-compat.js"></script>
-    <script defer src="/__/firebase/10.5.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.5.0/firebase-firestore-compat.js"></script> -->
-    <script type="module" src="Scripts/signup.js" defer>
-      </script>
+<head>
+  <meta charset="utf-8">
+  <meta name="google-site-verification" content="Wtc0-h1PpIr0fb3MNAyzD-15NdVy9rAaneiAPLEGHAM" />
+  <link href='https://fonts.googleapis.com/css?family=Lemonada' rel='stylesheet'>
+  <title>Sign-up</title>
+  <link rel="stylesheet" href="styles/signup.css">
+
+  <script type="module">   
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, fetchSignInMethodsForEmail } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyCTtgVoRDC4K1T-Hj87FDOjuvHaMH5irHk",
+    authDomain: "todolist-80334.firebaseapp.com",
+    projectId: "todolist-80334",
+    storageBucket: "todolist-80334.appspot.com",
+    messagingSenderId: "1033852333400",
+    appId: "1:1033852333400:web:a8597da22a7376bd2c092d"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    window.auth = getAuth(app);
+    window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+    window.signInWithPopup = signInWithPopup;
+    window.GoogleAuthProvider = GoogleAuthProvider;
+    window.fetchSignInMethodsForEmail = fetchSignInMethodsForEmail;
+  </script>
+
+  <script type="module" src="Scripts/signup.js" defer></script>
 </head>
 <body>
-    <div class = "menu">
-        <a href = "index.html" id="home" name="home"> Home </a>
-        <a href = "login.html" id="login" name="login" > login </a>
-        <a href = "about.html" id="about" name="about" > about </a>
-    </div>
-    </div>
-<div class="backgrd1">
-  <br>
-  <a href="index.html"><img src="images/icon.jpg"></a> 
+  <div class="menu">
+    <a href="index.html" id="home" name="home">Home</a>
+    <a href="login.html" id="login" name="login">Login</a>
+    <a href="about.html" id="about" name="about">About</a>
+  </div>
+  <div class="backgrd1">
     <br>
-    <div class = "wrapper">
-        <form class="form">
-        
-            <!-- <label for="fname" id="fname"><b>First name:</b></label>
-            <input type="text" placeholder="Enter first name" name="fname" required>
-        <br>
-        <label for="lname" id="lname"><b>Last name:</b></label>
-            <input type="text" placeholder="Enter last name" name="lname" required>
-        <br> -->
+    <a href="index.html"><img src="images/icon.jpg"></a> 
+    <br>
+    <div class="wrapper">
+      <form class="form">
         <label for="emal"><b>email:</b></label>
-            <input type="text" placeholder="Enter email" name="emal" id="emal">
+        <input type="text" placeholder="Enter email" name="emal" id="emal">
         <br>
         <label for="psw"><b>Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id="psw">
+        <input type="password" placeholder="Enter Password" name="psw" id="psw">
         <br>
         <label for="rpsw"><b>Re-enter Password:</b></label>
-            <input type="password" placeholder="Re-enter Password" name="rpsw" id="rpsw">
+        <input type="password" placeholder="Re-enter Password" name="rpsw" id="rpsw">
         <br>
-        <!-- <label for="security"><b>Choose a Security Question:</b></label>
-        <br>
-        <select class="sel" name="sel">
-            <option value="0">What is the name of your first pet</option>
-            <option value="1">what is the name of your favourite teacher</option>
-            <option value="2">What was the name of your elementary school?</option>
-            <option value="3">What is the make of your favourite car?</option>    
-            <option value="4">What is your favourite food?</option>
-        </select>
-        <br>
-        <label for="answer"><b>Security Answer:</b></label>
-            <input type="text" placeholder="Security Answer" name="answer" required>
-        <br> -->
-        <input type = "checkbox" id = "terms" name="terms"> I have read and accepted <a href="https://www.termsofservicegenerator.net/live.php?token=zxfqv76OpFtU6byGpwKF3zebZF0Y9ufL"> the terms of service</a> <br>
-        <input type = "checkbox" id = "privacy" name="privacy"> I have read and accepted <a href="privacy.html"> the privacy policy</a><br>
-        <button id="su" class="sup">Sign Up</button> <br>
+        <input type="checkbox" id="terms" name="terms"> I have read and accepted <a href="https://www.termsofservicegenerator.net/live.php?token=zxfqv76OpFtU6byGpwKF3zebZF0Y9ufL">the terms of service</a> <br>
+        <input type="checkbox" id="privacy" name="privacy"> I have read and accepted <a href="privacy.html">the privacy policy</a><br>
+        <button type="button" id="su" class="sup">Sign Up</button> <br>
         <br>  
-        <button id="gicon" class="supgl"><img src="images/Google.png"> Login with Google instead</button>
-       <br>
-       <br>
-       <p> Already have an account? <a href="login.html"> Login instead</a></p>
+        <button type="button" id="gicon" class="supgl"><img src="images/Google.png"> Login with Google instead</button>
         <br>
         <br>
+        <p>Already have an account? <a href="login.html">Login instead</a></p>
+        <br>
+        <br>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
