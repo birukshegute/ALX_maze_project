@@ -103,6 +103,17 @@ img {
 #pri:focus {
     outline: none;
   }
+#pri1{
+    height: 50px;
+    border: none;
+    overflow: hidden;
+  }
+#pri1::-moz-focus-inner {
+    border: 0;
+  }
+#pri1:focus {
+    outline: none;
+  }
 option{
     width: 100px;
     font-size: 18px;
