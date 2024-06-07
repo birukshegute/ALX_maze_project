@@ -20,6 +20,9 @@
   };
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
+
+  window.firebaseAuth = auth;
+  window.sendPasswordResetEmail = sendPasswordResetEmail;
     </script>
     <script type="module" src="Scripts/forgot.js" defer> </script>
 </head>
@@ -35,23 +38,10 @@
           <br>
           <div class = "wrapper">
              <h2>Forgot Password?</h2>
-              <form class="form">
-                  <label for="uname"><b>Enter your email:</b></label>
-                  <input type="text" placeholder="Enter Username" name="uname" required>
+              <form class="form" id="forgotPasswordForm">
+                  <label for="email"><b>Enter your email:</b></label>
+                  <input type="text" placeholder="Enter Username" name="email" id="email">
                   <br>
-              <!-- <h3> Please Answer Your Security Question.</h3>
-              <select class="sel" name="sel">
-                <option value="0">What is the name of your first pet</option>
-                <option value="1">what is the name of your favourite teacher</option>
-                <option value="2">What was the name of your elementary school?</option>
-                <option value="3">What is the make of your favourite car?</option>    
-                <option value="4">What is your favourite food?</option>
-            </select>
-            <br>
-            <br>
-                <label for="answer"><b>Security Answer:</b></label>
-                <input type="text" placeholder="Security Answer" name="answer" required> <br>
-                <br> -->
                 <br>
                 <button type="submit">Reset Password</button> <br>
                 </form>
