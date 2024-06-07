@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const auth = window.firebaseAuth;
     const confirmPasswordReset = window.confirmPasswordReset;
-    
+
     const form = document.querySelector("form");
 
     form.addEventListener("submit", (event) => {
@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const params = new URLSearchParams(window.location.search);
       const oobCode = params.get('oobCode');
-      const newPassword = document.querySelector("input[name='psw']").value;
-      const reenteredPassword = document.querySelector("input[name='rpsw']").value;
+      const newPassword = document.getElementById("psw").value;
+      const reenteredPassword = document.getElementById("rpsw").value;
 
       if (newPassword !== reenteredPassword) {
         alert("Passwords do not match.");

@@ -60,12 +60,16 @@ const deleteDoc = window.deleteDoc;
     if (!user) return;
 
     const taskName = document.getElementById("Box").value;
-    const priority = document.getElementById("pri").value;
+    let priority = document.getElementById("pri").value;
 
     if (!taskName) {
       alert("Task name cannot be empty.");
       return;
     }
+    if (!priority) {
+      priority = "low"; // Default priority set here
+    }
+  
 
     const tasksRef = collection(db, "users", user.uid, "tasks");
 
@@ -127,12 +131,12 @@ const deleteDoc = window.deleteDoc;
           taskElement.appendChild(priorityImg);
 
           const editButton = document.createElement("button");
-          editButton.innerHTML = '<img src="images/edit.png" alt="Edit">';
+          editButton.innerHTML = '<img src="images/edit.png" alt="Edit" id="edt">';
           editButton.addEventListener("click", () => editTask(doc.id, task));
           taskElement.appendChild(editButton);
 
           const deleteButton = document.createElement("button");
-          deleteButton.innerHTML = '<img src="images/delete.png" alt="Delete">';
+          deleteButton.innerHTML = '<img src="images/delete.png" alt="Delete" id="dlt">';
           deleteButton.addEventListener("click", () => deleteTask(doc.id));
           taskElement.appendChild(deleteButton);
 

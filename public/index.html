@@ -49,28 +49,23 @@ const db = getFirestore(app);
     </div>
     <div class="backgrd1">
       <br>
-      <a href="index.html"><img src="images/icon.jpg" alt="Logo"></a>
+      <a href="index.html"><img src="images/icon.jpg" alt="Logo" id="logo1"></a>
       <br>
-      <div class="wrapper">
-        <input type="text" id="Box1" name="Box1" placeholder="Add a Task">
-        <button id="addTask" type="submit"><b>ADD</b></button>
+      <div class="landingPage">
+      <h3> 
+        Manage your task using our service free of charge!
+      </h3>
+      <br>
+      <img src="images/landing.png" id="landing">
+      <br>
+      <p> Use our secure <a href="login.html">login</a> serivce to have access to your account anywhere</p>
+      <br>
+      <img src="images/landing1.png" id="landing1">
+      <br>
+      <p><a href="signup.html"> Sign up</a> using our sign up page</p>
+      <br>
+      <img src= "images/landing2.png" id="landing2">
       </div>
-    </div>
-    <br>
-    <div class="priority">
-      <p>Choose priority</p>
-      <select name="pri1" id="pri1" multiple>
-        <option id="low1" value="low1">Low</option>
-        <option id= "medium1" value="medium1">Medium</option>
-        <option id="high1" value="high1">High</option>
-      </select>
-    </div>
-    <br>
-    <div class="tasks">
-      <p class="topic">Tasks</p>
-      <ul id="taskList" class="check"></ul>
-      <p class="warn" id="taskWarn">Please sign up or login to add tasks.</p>
-    </div>
   </section>
 
   <section id="signedin" hidden>
@@ -82,7 +77,7 @@ const db = getFirestore(app);
     </div>
     <div class="backgrd1">
       <br>
-      <a href="index.html"><img src="images/icon.jpg" alt="Logo"></a>
+      <a href="index.html"><img src="images/icon.jpg" alt="Logo" id="logo"></a>
       <br>
       <div class="wrapper">
         <input type="text" id="Box" name="Box" placeholder="Add a Task">
