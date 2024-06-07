@@ -10,4 +10,4 @@ It is done as a part of the ALX SE program curriculum.
 
 # Tools
 
-The project uses HyperText Markup Language (HTML), Cascading Style Sheet (CSS), and JavaScript Programming Languages.
+The project uses HyperText Markup Language (HTML), Cascading Style Sheet (CSS), and JavaScript Programming Languages. The back end of the project is done using firebase.
