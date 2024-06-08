@@ -60,7 +60,8 @@ const deleteDoc = window.deleteDoc;
     if (!user) return;
 
     const taskName = document.getElementById("Box").value;
-    let priority = document.getElementById("pri").value;
+    const prioritySelect = document.getElementById("pri");
+    let priority = prioritySelect.value;
 
     if (!taskName) {
       alert("Task name cannot be empty.");
@@ -89,6 +90,7 @@ const deleteDoc = window.deleteDoc;
             completed: false
           }).then(() => {
             loadTasks(user.uid);
+            prioritySelect.value = "low";
           }).catch((error) => {
             console.error("Error adding task: ", error);
           });
