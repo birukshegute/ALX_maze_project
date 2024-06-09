@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         confirmPasswordReset(auth, oobCode, newPassword)
           .then(() => {
             alert("Password has been reset successfully.");
-            window.location.href = "login.html"; // Redirect to login page after reset
+            window.location.href = "login.html";
           })
           .catch((error) => {
             const errorMessage = error.message;
