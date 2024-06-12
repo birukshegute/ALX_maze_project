@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   else
   {
-    fetchSignInMethodsForEmail(auth, ema) // Changed this line
+    fetchSignInMethodsForEmail(auth, ema)
         .then((methods) => {
           if (methods && methods.length > 0) {
             alert("Email already in use. Please use a different email.");
