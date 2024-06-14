@@ -1,6 +1,7 @@
 ## To-Do List Web App
 
-This is a repository that contains the source code for running a To-Do List Web App in a browser.
+This is a repository that contains the source code for running a To-Do List Web App in a browser. 
+Click thid link to check out the deployed project https://todolist-80334.web.app/
 
 # What is the To-Do List Web App project?
 
